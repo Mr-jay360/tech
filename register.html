@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Register - SIMPLE COOPERATION</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@700&display=swap');
+
+    body { font-family: 'Inter', system-ui, sans-serif; }
+    .logo-font { font-family: 'Playfair Display', serif; }
+    .input-focus:focus {
+      outline: none;
+      border-color: #10b981;
+      box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.15);
+    }
+    #countryCode {
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3E%3Cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3E%3C/svg%3E");
+      background-position: right 0.75rem center;
+      background-repeat: no-repeat;
+      background-size: 1.25rem;
+    }
+    input[list="bankList"] {
+      background: white url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3E%3Cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3E%3C/svg%3E") right 0.75rem center no-repeat;
+      background-size: 1.25rem;
+    }
+  </style>
+</head>
+<body class="bg-slate-50 min-h-screen flex flex-col">
+
+  <!-- Header -->
+  <header class="bg-white border-b border-slate-200 sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
+      <div class="flex items-center gap-x-3">
+        <div class="w-10 h-10 bg-emerald-600 rounded-2xl flex items-center justify-center text-white text-3xl font-bold logo-font shadow-inner">S</div>
+        <div class="logo-font text-3xl font-bold tracking-tighter text-slate-900">SIMPLE<span class="text-emerald-600">COOPERATION</span></div>
+      </div>
+      <a href="index.html" class="text-slate-600 hover:text-slate-900 font-medium flex items-center gap-2">
+        <i class="fa-solid fa-arrow-left"></i> Back to Home
+      </a>
+    </div>
+  </header>
+
+  <!-- Main -->
+  <main class="flex-1 flex items-center justify-center py-16 px-6">
+    <div class="w-full max-w-lg bg-white rounded-3xl shadow-xl border border-slate-100 overflow-hidden">
+      
+      <div class="bg-gradient-to-r from-emerald-600 to-emerald-700 px-10 py-12 text-white text-center">
+        <h1 class="text-4xl font-bold logo-font tracking-tight">Create Your Account</h1>
+        <p class="mt-3 text-emerald-100 text-lg">Join trusted financial cooperation worldwide</p>
+      </div>
+
+      <form id="registerForm" class="p-10 space-y-6">
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div>
+            <label for="firstName" class="block text-sm font-medium text-slate-700 mb-1.5">First Name</label>
+            <input type="text" id="firstName" required class="input-focus w-full px-5 py-4 border border-slate-300 rounded-2xl bg-slate-50/50" placeholder="e.g. Michael"/>
+          </div>
+          <div>
+            <label for="lastName" class="block text-sm font-medium text-slate-700 mb-1.5">Last Name</label>
+            <input type="text" id="lastName" required class="input-focus w-full px-5 py-4 border border-slate-300 rounded-2xl bg-slate-50/50" placeholder="e.g. Thompson"/>
+          </div>
+        </div>
+
+        <div>
+          <label for="username" class="block text-sm font-medium text-slate-700 mb-1.5">Username</label>
+          <input type="text" id="username" required minlength="4" class="input-focus w-full px-5 py-4 border border-slate-300 rounded-2xl bg-slate-50/50" placeholder="Choose a unique username"/>
+        </div>
+
+        <div>
+          <label for="email" class="block text-sm font-medium text-slate-700 mb-1.5">Email Address</label>
+          <input type="email" id="email" required class="input-focus w-full px-5 py-4 border border-slate-300 rounded-2xl bg-slate-50/50" placeholder="yourname@example.com"/>
+        </div>
+
+        <!-- Bank Name (with suggestions grouped by region) -->
+        <div>
+          <label for="bankName" class="block text-sm font-medium text-slate-700 mb-1.5">Bank Name</label>
+          <input type="text" id="bankName" name="bankName" list="bankList" required 
+                 class="input-focus w-full px-5 py-4 border border-slate-300 rounded-2xl bg-slate-50/50" 
+                 placeholder="Start typing your bank name (e.g. Zenith, Barclays, Chase)"/>
+          <datalist id="bankList">
+            <!-- Nigeria -->
+            <option value="Access Bank Plc (Nigeria)"></option>
+            <option value="Zenith Bank Plc (Nigeria)"></option>
+            <option value="Guaranty Trust Bank (GTBank) (Nigeria)"></option>
+            <option value="First Bank of Nigeria"></option>
+            <option value="United Bank for Africa (UBA) (Nigeria)"></option>
+            <option value="Ecobank Nigeria"></option>
+            <option value="Fidelity Bank Plc (Nigeria)"></option>
+            <option value="Stanbic IBTC Bank (Nigeria)"></option>
+            <option value="Sterling Bank Plc (Nigeria)"></option>
+            <option value="Wema Bank Plc (Nigeria)"></option>
+            <option value="Union Bank of Nigeria"></option>
+            <option value="Polaris Bank Limited (Nigeria)"></option>
+            <option value="Keystone Bank Limited (Nigeria)"></option>
+            <option value="Citibank Nigeria"></option>
+            <option value="Standard Chartered Nigeria"></option>
+            <option value="Titan Trust Bank (Nigeria)"></option>
+            <option value="Globus Bank Limited (Nigeria)"></option>
+            <!-- Ghana -->
+            <option value="GCB Bank Plc (Ghana)"></option>
+            <option value="Absa Bank Ghana Limited"></option>
+            <option value="Access Bank (Ghana) Plc"></option>
+            <option value="Agricultural Development Bank Plc (Ghana)"></option>
+            <option value="Ecobank Ghana Limited"></option>
+            <option value="Stanbic Bank Ghana Limited"></option>
+            <option value="Consolidated Bank Ghana Limited"></option>
+            <option value="CalBank PLC (Ghana)"></option>
+            <option value="Prudential Bank Limited (Ghana)"></option>
+            <option value="Zenith Bank Ghana"></option>
+            <option value="United Bank for Africa (UBA) Ghana"></option>
+            <option value="Bank of Africa Ghana Limited"></option>
+            <option value="First Atlantic Bank (Ghana)"></option>
+            <!-- United States -->
+            <option value="JPMorgan Chase Bank (USA)"></option>
+            <option value="Bank of America (USA)"></option>
+            <option value="Citibank NA (USA)"></option>
+            <option value="Wells Fargo Bank (USA)"></option>
+            <option value="U.S. Bank (USA)"></option>
+            <option value="PNC Bank (USA)"></option>
+            <option value="Truist Bank (USA)"></option>
+            <option value="TD Bank (USA)"></option>
+            <option value="Capital One (USA)"></option>
+            <!-- United Kingdom -->
+            <option value="Barclays Bank (UK)"></option>
+            <option value="HSBC UK"></option>
+            <option value="Lloyds Bank (UK)"></option>
+            <option value="NatWest (UK)"></option>
+            <option value="Santander UK"></option>
+            <option value="Nationwide Building Society (UK)"></option>
+            <option value="Standard Chartered (UK)"></option>
+            <option value="Virgin Money UK"></option>
+            <!-- Other West Africa (ECOWAS excl. NG/GH) -->
+            <option value="Ecobank (Benin / Côte d'Ivoire / Senegal / Togo / etc.)"></option>
+            <option value="United Bank for Africa (UBA) - West Africa"></option>
+            <option value="Orabank (Benin / Burkina Faso / Côte d'Ivoire / etc.)"></option>
+            <option value="Bank of Africa (BOA) - West Africa"></option>
+            <option value="Société Générale (Côte d'Ivoire / Senegal / etc.)"></option>
+            <option value="Coris Bank International (Burkina Faso / Benin / etc.)"></option>
+            <option value="Atlantic Bank (Togo / Benin)"></option>
+            <option value="BSIC (Banque Sahélo-Saharienne) - West Africa"></option>
+          </datalist>
+          <p class="mt-1.5 text-xs text-slate-500">Select or type your bank name — suggestions include major banks from Nigeria, Ghana, USA, UK, and West Africa</p>
+        </div>
+
+        <div>
+          <label for="accountNumber" class="block text-sm font-medium text-slate-700 mb-1.5">Bank Account Number</label>
+          <input type="text" id="accountNumber" required pattern="[0-9]{8,20}" class="input-focus w-full px-5 py-4 border border-slate-300 rounded-2xl bg-slate-50/50" placeholder="Your local bank account number"/>
+          <p class="mt-1.5 text-xs text-slate-500">Used for loan disbursement & repayment</p>
+        </div>
+
+        <!-- Phone with Country Code -->
+        <div>
+          <label class="block text-sm font-medium text-slate-700 mb-1.5">Phone Number</label>
+          <div class="flex rounded-2xl border border-slate-300 overflow-hidden bg-slate-50/50 focus-within:border-emerald-500 focus-within:ring-2 focus-within:ring-emerald-200">
+            <select id="countryCode" class="input-focus w-32 sm:w-40 px-3 py-4 bg-white text-slate-700 border-r border-slate-200 appearance-none cursor-pointer font-medium">
+              <option value="+234" data-maxlength="10" selected>Nigeria (+234)</option>
+              <option value="+233" data-maxlength="9">Ghana (+233)</option>
+              <option value="+1" data-maxlength="10">United States / Canada (+1)</option>
+              <option value="+44" data-maxlength="10">United Kingdom (+44)</option>
+              <option value="+221" data-maxlength="9">Senegal (+221)</option>
+              <option value="+225" data-maxlength="8">Côte d'Ivoire (+225)</option>
+              <option value="+229" data-maxlength="8">Benin (+229)</option>
+              <option value="+226" data-maxlength="8">Burkina Faso (+226)</option>
+              <!-- Add more West African / European codes as needed -->
+              <option value="+ other">Other country...</option>
+            </select>
+            <input type="tel" id="phone" required pattern="[0-9]{7,15}" maxlength="15"
+                   class="flex-1 px-5 py-4 bg-transparent focus:outline-none" placeholder="8012345678"/>
+          </div>
+          <p class="mt-1.5 text-xs text-slate-500" id="phoneHelp">Enter your phone number without the country code</p>
+        </div>
+
+        <div>
+          <label for="password" class="block text-sm font-medium text-slate-700 mb-1.5">Password</label>
+          <input type="password" id="password" required minlength="8" class="input-focus w-full px-5 py-4 border border-slate-300 rounded-2xl bg-slate-50/50" placeholder="At least 8 characters"/>
+        </div>
+
+        <div class="pt-6">
+          <button type="submit" class="w-full py-5 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-lg rounded-2xl transition-all shadow-md flex items-center justify-center gap-3 group">
+            CREATE ACCOUNT
+            <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+          </button>
+        </div>
+
+        <div class="text-center text-sm text-slate-500">
+          Already have an account? 
+          <a href="login.html" class="text-emerald-600 hover:text-emerald-700 font-medium">Sign in</a>
+        </div>
+
+        <div class="text-center text-xs text-slate-400 pt-6 border-t border-slate-100">
+          By creating an account you agree to our 
+          <a href="#" class="text-slate-500 hover:text-slate-700">Terms</a> and 
+          <a href="#" class="text-slate-500 hover:text-slate-700">Privacy Policy</a>
+        </div>
+
+      </form>
+    </div>
+  </main>
+
+  <footer class="bg-slate-900 text-slate-400 py-8 text-center text-sm">
+    © 2010 – 2026 Simple Loan Cooperation Limited
+  </footer>
+
+  <script>
+    const countrySelect = document.getElementById('countryCode');
+    const phoneInput = document.getElementById('phone');
+    const phoneHelp = document.getElementById('phoneHelp');
+
+    function updatePhoneField() {
+      const selected = countrySelect.options[countrySelect.selectedIndex];
+      const code = selected.value;
+      const maxLen = selected.dataset.maxlength || "15";
+
+      phoneInput.maxLength = maxLen;
+      phoneInput.placeholder = code === "+ other" ? "Enter full international number" : "Enter number without " + code;
+      phoneHelp.textContent = code === "+ other" 
+        ? "Enter your full number including country code" 
+        : `Enter your phone number without the country code (${code})`;
+    }
+
+    countrySelect.addEventListener('change', updatePhoneField);
+    updatePhoneField();
+
+    /
+    });
+  </script>
+
+</body>
+</html>

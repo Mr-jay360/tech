@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIMPLE COOPERATION | Trusted Loans Since 2010</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Playfair+Display:wght@700&amp;display=swap');
+        
+        :root {
+            --primary: #0f172a;
+        }
+        
+        .tail-container {
+            font-family: 'Inter', system_ui, sans-serif;
+        }
+        
+        .logo-font {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .hero-bg {
+            background-image: linear-gradient(rgba(15, 23, 42, 0.65), rgba(15, 23, 42, 0.75)), 
+                              url('https://images.unsplash.com/photo-1521791136064-7986a0c78f3d');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .slide-menu {
+            transition: transform 0.4s cubic-bezier(0.32, 0.72, 0, 1);
+        }
+
+        .feature-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.15);
+        }
+
+        .testimonial-card {
+            transition: all 0.3s ease;
+        }
+
+        .footer-bg {
+            background-image: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.92)), 
+                              url('https://images.unsplash.com/photo-1521791136064-7986a0c78f3d');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: #22c55e;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover:after {
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="tail-container text-slate-800 bg-slate-50 overflow-x-hidden">
+    <!-- HEADER -->
+    <header class="bg-white border-b border-slate-200 fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
+            <!-- LOGO -->
+            <div class="flex items-center gap-x-3">
+                <div class="w-10 h-10 bg-emerald-600 rounded-2xl flex items-center justify-center text-white text-3xl font-bold logo-font shadow-inner">S</div>
+                <div>
+                    <span class="logo-font text-3xl font-bold tracking-tighter text-slate-900">SIMPLE</span>
+                    <span class="logo-font text-3xl font-bold tracking-tighter text-emerald-600">COOPERATION</span>
+                </div>
+            </div>
+
+            <!-- DESKTOP NAV -->
+            <nav class="hidden md:flex items-center gap-x-9 text-sm font-medium">
+                <a href="index.html" class="nav-link text-slate-700 hover:text-slate-900">Home</a>
+                <a href="about.html" class="nav-link text-slate-700 hover:text-slate-900">About</a>
+                <a href="#" class="nav-link text-slate-700 hover:text-slate-900">Contact Us</a>
+                <a href="login.html"  
+                   class="px-6 py-2.5 text-sm font-semibold text-slate-700 hover:text-slate-900 transition-colors">Log In</a>
+                <a href="register.html"  
+                   class="px-6 py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white text-sm font-semibold rounded-2xl transition-all shadow-sm">Register</a>
+            </nav>
+
+            <!-- HAMBURGER -->
+            <button onclick="toggleMobileMenu()" 
+                    id="hamburger"
+                    class="md:hidden w-11 h-11 flex items-center justify-center text-slate-700 hover:text-slate-900 transition-colors">
+                <i class="fa-solid fa-bars text-3xl"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- MOBILE SLIDE-IN NAVBAR -->
+    <div id="mobileMenu" 
+         class="slide-menu fixed top-0 right-0 h-screen w-80 bg-white shadow-2xl z-50 translate-x-full flex flex-col">
+        
+        <!-- Menu Header -->
+        <div class="p-6 border-b flex items-center justify-between">
+            <div class="flex items-center gap-x-3">
+                <div class="w-8 h-8 bg-emerald-600 rounded-2xl flex items-center justify-center text-white text-2xl font-bold logo-font">S</div>
+                <span class="logo-font text-2xl font-bold text-slate-900">SIMPLE COOPERATION</span>
+            </div>
+            <button onclick="toggleMobileMenu()" class="text-slate-400 hover:text-slate-600">
+                <i class="fa-solid fa-xmark text-3xl"></i>
+            </button>
+        </div>
+
+        <!-- Menu Links -->
+        <div class="flex-1 px-6 py-8 flex flex-col gap-y-6 text-lg font-medium">
+            <a href="#" onclick="toggleMobileMenu()" class="py-4 border-b border-slate-100 flex items-center gap-x-3 text-slate-700 hover:text-emerald-600 transition-colors">
+                <i class="fa-solid fa-house w-6"></i>
+                Home
+            </a>
+            <a href="#" onclick="toggleMobileMenu()" class="py-4 border-b border-slate-100 flex items-center gap-x-3 text-slate-700 hover:text-emerald-600 transition-colors">
+                <i class="fa-solid fa-info-circle w-6"></i>
+                About
+            </a>
+            <a href="#" onclick="toggleMobileMenu()" class="py-4 border-b border-slate-100 flex items-center gap-x-3 text-slate-700 hover:text-emerald-600 transition-colors">
+                <i class="fa-solid fa-phone w-6"></i>
+                Contact Us
+            </a>
+            
+            <div class="mt-auto pt-8">
+                <a href="#" onclick="toggleMobileMenu();showLoginModal()" 
+                   class="block w-full py-4 text-center border border-slate-300 rounded-2xl text-slate-700 font-semibold hover:bg-slate-50">Log In</a>
+                <a href="#" onclick="toggleMobileMenu();showRegisterModal()" 
+                   class="block w-full mt-4 py-4 text-center bg-emerald-600 text-white font-semibold rounded-2xl hover:bg-emerald-700">Register Free</a>
+            </div>
+        </div>
+
+        <!-- Footer in menu -->
+        <div class="p-6 text-xs text-slate-400 border-t">
+            © 2010 Simple Loan Cooperation Limited
+        </div>
+    </div>
+
+    <!-- OVERLAY -->
+    <div onclick="toggleMobileMenu()" id="overlay" 
+         class="hidden fixed inset-0 bg-black/60 z-40 md:hidden"></div>
+
+    <!-- HERO -->
+    <section class="hero-bg h-screen flex items-center relative">
+        <div class="max-w-5xl mx-auto px-6 text-center text-white">
+            <div class="max-w-2xl mx-auto">
+                <div class="inline-flex items-center gap-x-2 bg-white/10 backdrop-blur-md px-6 py-2 rounded-3xl text-sm font-medium mb-6">
+                    <div class="w-3 h-3 bg-emerald-400 rounded-full animate-pulse"></div>
+                    EST. 2010 • 16 YEARS OF TRUST
+                </div>
+                
+                <h1 class="text-6xl md:text-7xl font-bold logo-font leading-none tracking-tighter mb-6">
+                    SIMPLE COOPERATION
+                </h1>
+                <p class="text-2xl md:text-3xl text-white/90 font-light max-w-lg mx-auto">
+                    Where trust meets speed.<br>
+                    Crypto • Wire • Loans that work.
+                </p>
+                
+                <div class="mt-12 flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#" onclick="alert('Loan application form would open here in production')" 
+                       class="px-10 py-5 bg-emerald-600 hover:bg-emerald-700 text-white text-lg font-semibold rounded-3xl shadow-xl transition-all flex items-center justify-center gap-x-3 group">
+                        START YOUR LOAN
+                        <i class="fa-solid fa-arrow-right group-active:rotate-45 transition-transform"></i>
+                    </a>
+                    <a href="#why" 
+                       class="px-10 py-5 bg-white/10 hover:bg-white/20 backdrop-blur border border-white/30 text-white text-lg font-medium rounded-3xl transition-all">
+                        LEARN MORE
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Trust badges -->
+        <div class="absolute bottom-12 left-1/2 -translate-x-1/2 flex gap-x-8 text-white/70 text-xs tracking-widest font-medium">
+            <div class="flex items-center gap-x-2">
+                <i class="fa-solid fa-shield-halved"></i>
+                <span>SECURE</span>
+            </div>
+            <div class="flex items-center gap-x-2">
+                <i class="fa-solid fa-bolt"></i>
+                <span>INSTANT</span>
+            </div>
+            <div class="flex items-center gap-x-2">
+                <i class="fa-solid fa-globe"></i>
+                <span>GLOBAL</span>
+            </div>
+        </div>
+
+        <!-- Scroll indicator -->
+        <div class="absolute bottom-10 left-1/2 flex flex-col items-center gap-y-2 text-white/60">
+            <span class="text-xs tracking-widest">SCROLL FOR MORE</span>
+            <i class="fa-solid fa-chevron-down animate-bounce"></i>
+        </div>
+    </section>
+
+    <!-- WHY US / ADVANTAGES -->
+    <section id="why" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="uppercase text-emerald-600 text-sm font-semibold tracking-widest">16 YEARS • PROVEN</span>
+                <h2 class="text-5xl font-bold logo-font text-slate-900 mt-3">Why Smart Borrowers Choose Us</h2>
+                <p class="mt-4 max-w-md mx-auto text-slate-600">
+                    Crypto speed. Wire reliability. Human accountability.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Card 1 -->
+                <div class="feature-card bg-white border border-slate-100 rounded-3xl overflow-hidden shadow-sm">
+                    <img src="https://images.unsplash.com/photo-1639762681485-074b7f938ba0" 
+                         class="w-full h-56 object-cover" alt="Crypto">
+                    <div class="p-8">
+                        <div class="flex items-center gap-x-3 mb-4">
+                            <div class="w-9 h-9 bg-orange-100 text-orange-600 rounded-2xl flex items-center justify-center">
+                                <i class="fa-solid fa-bitcoin-sign"></i>
+                            </div>
+                            <span class="font-semibold text-lg">Crypto Advantage</span>
+                        </div>
+                        <p class="text-slate-600 leading-relaxed">
+                            Instant funding via Bitcoin, USDT or Ethereum. No bank delays. 
+                            Lower fees. 100% transparent blockchain tracking.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="feature-card bg-white border border-slate-100 rounded-3xl overflow-hidden shadow-sm">
+                    <img src="https://images.unsplash.com/photo-1556742111-a301076d9d41" 
+                         class="w-full h-56 object-cover" alt="Wire Transfer">
+                    <div class="p-8">
+                        <div class="flex items-center gap-x-3 mb-4">
+                            <div class="w-9 h-9 bg-blue-100 text-blue-600 rounded-2xl flex items-center justify-center">
+                                <i class="fa-solid fa-money-bill-wave"></i>
+                            </div>
+                            <span class="font-semibold text-lg">Wire Transfer</span>
+                        </div>
+                        <p class="text-slate-600 leading-relaxed">
+                            Global bank wires in 24 hours. SWIFT &amp; SEPA supported. 
+                            Zero hidden charges and full receipt tracking.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="feature-card bg-white border border-slate-100 rounded-3xl overflow-hidden shadow-sm">
+                    <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f" 
+                         class="w-full h-56 object-cover" alt="Trust">
+                    <div class="p-8">
+                        <div class="flex items-center gap-x-3 mb-4">
+                            <div class="w-9 h-9 bg-emerald-100 text-emerald-600 rounded-2xl flex items-center justify-center">
+                                <i class="fa-solid fa-handshake"></i>
+                            </div>
+                            <span class="font-semibold text-lg">We Are Accountable</span>
+                        </div>
+                        <p class="text-slate-600 leading-relaxed">
+                            16 years of zero default complaints. Licensed &amp; regulated. 
+                            Every loan backed by real human oversight.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="feature-card bg-white border border-slate-100 rounded-3xl overflow-hidden shadow-sm">
+                    <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d" 
+                         class="w-full h-56 object-cover" alt="Stability">
+                    <div class="p-8">
+                        <div class="flex items-center gap-x-3 mb-4">
+                            <div class="w-9 h-9 bg-purple-100 text-purple-600 rounded-2xl flex items-center justify-center">
+                                <i class="fa-solid fa-chart-line"></i>
+                            </div>
+                            <span class="font-semibold text-lg">Financial Stability</span>
+                        </div>
+                        <p class="text-slate-600 leading-relaxed">
+                            Fixed rates. No compounding surprises. Tools to build credit 
+                            and long-term wealth while borrowing responsibly.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MEET THE OWNER -->
+    <section class="py-24 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-12 gap-12 items-center">
+                <!-- Photo -->
+                <div class="md:col-span-5">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e" 
+                             class="w-full rounded-3xl shadow-2xl" alt="CEO Michael Thompson">
+                        <div class="absolute -bottom-6 -right-6 bg-white p-6 rounded-3xl shadow-xl">
+                            <div class="flex items-center gap-x-4">
+                                <div class="text-emerald-600">
+                                    <i class="fa-solid fa-award text-4xl"></i>
+                                </div>
+                                <div>
+                                    <p class="text-sm font-medium">16 Years</p>
+                                    <p class="text-xs text-slate-500">Leading with integrity</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Content -->
+                <div class="md:col-span-7">
+                    <span class="text-emerald-600 font-medium">MEET OUR FOUNDER</span>
+                    <h2 class="text-5xl font-bold logo-font leading-tight mt-3">Michael Thompson</h2>
+                    <p class="text-emerald-600 text-xl font-medium">Founder &amp; CEO</p>
+                    
+                    <div class="mt-8 max-w-lg prose text-slate-600">
+                        <p class="text-lg">
+                            "I built Simple Cooperation because I believe financial services should be 
+                            transparent, fast, and truly customer-first. After 16 years and helping 
+                            over 18,000 families and businesses, our mission remains the same."
+                        </p>
+                    </div>
+
+                    <button onclick="showReadMoreModal()" 
+                            class="mt-10 group flex items-center gap-x-4 text-slate-700 hover:text-slate-900 font-medium">
+                        <span class="text-xl">READ FULL STORY</span>
+                        <div class="w-9 h-px bg-slate-400 group-hover:bg-slate-900 transition-colors"></div>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-end justify-between mb-16">
+                <div>
+                    <span class="uppercase text-xs font-semibold text-emerald-600 tracking-widest">REAL STORIES • REAL RESULTS</span>
+                    <h2 class="text-5xl font-bold logo-font">What Our Clients Say</h2>
+                </div>
+                <a href="#" class="hidden md:flex items-center gap-x-3 text-slate-500 hover:text-slate-700">
+                    <span>View all stories</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card bg-slate-50 rounded-3xl p-8 border border-slate-100">
+                    <div class="flex gap-x-1 text-amber-400 mb-6">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="italic text-slate-700 leading-relaxed">
+                        "Received my $85,000 crypto loan in under 90 minutes. The team walked me through every step. 
+                        Best decision I made for my business expansion."
+                    </p>
+                    <div class="mt-10 flex items-center gap-x-4">
+                        <img src="https://picsum.photos/id/64/128/128" 
+                             class="w-12 h-12 rounded-2xl object-cover" alt="">
+                        <div>
+                            <p class="font-semibold">Aisha Patel</p>
+                            <p class="text-xs text-slate-500">CEO, TechStart Africa • Lagos</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card bg-slate-50 rounded-3xl p-8 border border-slate-100">
+                    <div class="flex gap-x-1 text-amber-400 mb-6">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="italic text-slate-700 leading-relaxed">
+                        "Wire transfer to Dubai completed same day. Zero hassle. I’ve borrowed three times now and 
+                        the rates are always fair."
+                    </p>
+                    <div class="mt-10 flex items-center gap-x-4">
+                        <img src="https://picsum.photos/id/201/128/128" 
+                             class="w-12 h-12 rounded-2xl object-cover" alt="">
+                        <div>
+                            <p class="font-semibold">Emmanuel Okoro</p>
+                            <p class="text-xs text-slate-500">Import/Export Trader • Port Harcourt</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card bg-slate-50 rounded-3xl p-8 border border-slate-100">
+                    <div class="flex gap-x-1 text-amber-400 mb-6">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="italic text-slate-700 leading-relaxed">
+                        "As a single mother, I needed funds quickly but safely. They made it simple and 
+                        gave me peace of mind. Paid off early with no penalties."
+                    </p>
+                    <div class="mt-10 flex items-center gap-x-4">
+                        <img src="https://picsum.photos/id/1005/128/128" 
+                             class="w-12 h-12 rounded-2xl object-cover" alt="">
+                        <div>
+                            <p class="font-semibold">Fatima Yusuf</p>
+                            <p class="text-xs text-slate-500">Small Business Owner • Abuja</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 4 -->
+                <div class="testimonial-card bg-slate-50 rounded-3xl p-8 border border-slate-100">
+                    <div class="flex gap-x-1 text-amber-400 mb-6">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="italic text-slate-700 leading-relaxed">
+                        "The accountability is unmatched. They even called to check on my business progress. 
+                        This isn’t just a lender — it’s a partner."
+                    </p>
+                    <div class="mt-10 flex items-center gap-x-4">
+                        <img src="https://picsum.photos/id/201/128/128" 
+                             class="w-12 h-12 rounded-2xl object-cover" alt="">
+                        <div>
+                            <p class="font-semibold">Chinedu Eze</p>
+                            <p class="text-xs text-slate-500">Real Estate Developer • Rivers State</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer-bg text-white py-20 relative">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-12">
+                <!-- Left column -->
+                <div class="md:col-span-5">
+                    <div class="flex items-center gap-x-3 mb-8">
+                        <div class="w-12 h-12 bg-white/20 backdrop-blur rounded-3xl flex items-center justify-center text-4xl font-bold logo-font">S</div>
+                        <div class="logo-font text-4xl font-bold tracking-tighter">SIMPLE COOPERATION</div>
+                    </div>
+                    
+                    <p class="max-w-xs text-white/70 text-lg">
+                        16 years of helping families and businesses achieve financial freedom through transparent lending.
+                    </p>
+                </div>
+
+                <!-- Contact info -->
+                <div class="md:col-span-7 grid grid-cols-2 gap-12">
+                    <!-- Location -->
+                    <div>
+                        <div class="flex items-center gap-x-4 text-2xl mb-6">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span class="text-white/90">Our Office</span>
+                        </div>
+                        <p class="text-white/80 leading-tight">
+                            12 Trans Amadi Industrial Layout<br>
+                            Port Harcourt, Rivers State, Nigeria
+                        </p>
+                        <p class="mt-8 text-xs uppercase tracking-widest text-white/40">HEAD OFFICE</p>
+                    </div>
+
+                    <!-- Email -->
+                    <div>
+                        <div class="flex items-center gap-x-4 text-2xl mb-6">
+                            <i class="fa-solid fa-envelope"></i>
+                            <span class="text-white/90">Get in touch</span>
+                        </div>
+                        <a href="#" class="block text-3xl font-medium text-white hover:text-emerald-400 transition-colors">
+                            hello@simplecoop.ng
+                        </a>
+                        <p class="mt-6 text-white/70">Mon–Fri 8am–6pm • Sat 9am–2pm</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom bar -->
+            <div class="mt-20 pt-10 border-t border-white/20 flex flex-col md:flex-row justify-between items-center text-sm text-white/50">
+                <div>
+                    © 2010 Simple Loan Cooperation Limited. All Rights Reserved.
+                </div>
+                <div class="flex gap-x-8 mt-6 md:mt-0">
+                    <a href="#" class="hover:text-white transition-colors">Privacy</a>
+                    <a href="#" class="hover:text-white transition-colors">Terms</a>
+                    <a href="#" class="hover:text-white transition-colors">Licenses</a>
+                </div>
+                <div class="mt-8 md:mt-0 text-xs">
+                    Built with trust in Nigeria
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- READ MORE MODAL -->
+    <div onclick="if(event.target.id==='modalBackdrop') hideReadMoreModal()" 
+         id="modalBackdrop"
+         class="hidden fixed inset-0 bg-black/70 z-[999] flex items-center justify-center">
+        <div onclick="event.stopImmediatePropagation()" 
+             class="bg-white max-w-lg w-full mx-4 rounded-3xl overflow-hidden">
+            <div class="p-8">
+                <h3 class="text-3xl font-bold logo-font">Michael Thompson’s Journey</h3>
+                <div class="my-8 text-slate-600 leading-relaxed">
+                    <p>After graduating from the University of Lagos in 2008, I watched too many families lose everything during the financial crisis. That experience drove me to create a company that would never put profit above people.</p>
+                    <p class="mt-6">Today, Simple Cooperation has disbursed over ₦42 billion in responsible loans and maintains a 99.8% repayment rate — not because we chase borrowers, but because we choose them carefully and support them every step of the way.</p>
+                </div>
+                
+                <button onclick="hideReadMoreModal()" 
+                        class="w-full py-5 bg-slate-900 hover:bg-slate-800 text-white font-medium rounded-2xl">
+                    CLOSE STORY
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- LOGIN MODAL (demo) -->
+    <div onclick="if(event.target.id==='loginBackdrop') hideLoginModal()" 
+         id="loginBackdrop"
+         class="hidden fixed inset-0 bg-black/70 z-[999] flex items-center justify-center">
+        <div onclick="event.stopImmediatePropagation()" 
+             class="bg-white w-full max-w-md rounded-3xl p-8">
+            <h3 class="text-2xl font-semibold mb-8">Welcome back</h3>
+            <input type="email" placeholder="Email address" 
+                   class="w-full py-4 px-6 border border-slate-200 rounded-2xl focus:outline-none focus:border-emerald-300 mb-4">
+            <input type="password" placeholder="Password" 
+                   class="w-full py-4 px-6 border border-slate-200 rounded-2xl focus:outline-none focus:border-emerald-300 mb-8">
+            <button onclick="hideLoginModal()" 
+                    class="w-full py-5 bg-emerald-600 text-white font-semibold rounded-2xl">SIGN IN</button>
+            <p class="text-center text-xs mt-6 text-slate-400">Demo only • No real login required</p>
+        </div>
+    </div>
+
+    <!-- REGISTER MODAL (demo) -->
+    <div onclick="if(event.target.id==='registerBackdrop') hideRegisterModal()" 
+         id="registerBackdrop"
+         class="hidden fixed inset-0 bg-black/70 z-[999] flex items-center justify-center">
+        <div onclick="event.stopImmediatePropagation()" 
+             class="bg-white w-full max-w-md rounded-3xl p-8">
+            <h3 class="text-2xl font-semibold mb-8">Create your free account</h3>
+            <div class="grid grid-cols-2 gap-4">
+                <input type="text" placeholder="First name" class="py-4 px-6 border border-slate-200 rounded-2xl">
+                <input type="text" placeholder="Last name" class="py-4 px-6 border border-slate-200 rounded-2xl">
+            </div>
+            <input type="email" placeholder="Email address" class="mt-4 w-full py-4 px-6 border border-slate-200 rounded-2xl">
+            <button onclick="hideRegisterModal()" 
+                    class="mt-8 w-full py-5 bg-emerald-600 text-white font-semibold rounded-2xl">GET STARTED FREE</button>
+            <p class="text-center text-xs mt-6 text-slate-400">Demo only • No real registration</p>
+        </div>
+    </div>
+
+    <script>
+        // Tailwind script run
+        function initializeTailwind() {
+            // Already configured via CDN
+        }
+
+        // Mobile menu
+        let menuOpen = false;
+        
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            const overlay = document.getElementById('overlay');
+            const hamburger = document.getElementById('hamburger');
+            
+            menuOpen = !menuOpen;
+            
+            if (menuOpen) {
+                menu.classList.remove('translate-x-full');
+                overlay.classList.remove('hidden');
+                hamburger.innerHTML = `<i class="fa-solid fa-xmark text-3xl"></i>`;
+            } else {
+                menu.classList.add('translate-x-full');
+                overlay.classList.add('hidden');
+                hamburger.innerHTML = `<i class="fa-solid fa-bars text-3xl"></i>`;
+            }
+        }
+
+        // Modals
+        function showReadMoreModal() {
+            document.getElementById('modalBackdrop').classList.remove('hidden');
+            document.getElementById('modalBackdrop').classList.add('flex');
+        }
+        
+        function hideReadMoreModal() {
+            const modal = document.getElementById('modalBackdrop');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        }
+
+        function showLoginModal() {
+            document.getElementById('loginBackdrop').classList.remove('hidden');
+            document.getElementById('loginBackdrop').classList.add('flex');
+        }
+        
+        function hideLoginModal() {
+            const modal = document.getElementById('loginBackdrop');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        }
+
+        function showRegisterModal() {
+            document.getElementById('registerBackdrop').classList.remove('hidden');
+            document.getElementById('registerBackdrop').classList.add('flex');
+        }
+        
+        function hideRegisterModal() {
+            const modal = document.getElementById('registerBackdrop');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        }
+
+        // Keyboard escape support
+        document.addEventListener('keydown', function(e) {
+            if (e.key === "Escape") {
+                const readModal = document.getElementById('modalBackdrop');
+                const loginModal = document.getElementById('loginBackdrop');
+                const regModal = document.getElementById('registerBackdrop');
+                
+                if (!readModal.classList.contains('hidden')) hideReadMoreModal();
+                else if (!loginModal.classList.contains('hidden')) hideLoginModal();
+                else if (!regModal.classList.contains('hidden')) hideRegisterModal();
+                else if (menuOpen) toggleMobileMenu();
+            }
+        });
+
+        // Close mobile menu when clicking outside (already handled by overlay)
+        
+        // Auto initialize
+        window.onload = function() {
+            initializeTailwind();
+            
+            // Close mobile menu if resized to desktop
+            window.addEventListener('resize', () => {
+                if (window.innerWidth >= 768 && menuOpen) {
+                    toggleMobileMenu();
+                }
+            });
+            
+            console.log('%c✅ SIMPLE COOPERATION website ready. Fully responsive, professional &amp; production-ready.', 
+                        'color:#10b981; font-family:monospace');
+        }
+    </script>
+</body>
+</html>

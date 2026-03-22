@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us - SIMPLE COOPERATION</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@700&display=swap');
+
+    body { font-family: 'Inter', system-ui, sans-serif; }
+    .logo-font { font-family: 'Playfair Display', serif; }
+    .section-bg { background: linear-gradient(to bottom, #f8fafc, #ffffff); }
+    .timeline-item { transition: all 0.4s ease; }
+    .timeline-item:hover { transform: translateY(-8px); }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800">
+
+  <!-- Header (consistent with previous pages) -->
+  <header class="bg-white border-b border-slate-200 fixed w-full z-50">
+    <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
+      <div class="flex items-center gap-x-3">
+        <div class="w-10 h-10 bg-emerald-600 rounded-2xl flex items-center justify-center text-white text-3xl font-bold logo-font shadow-inner">S</div>
+        <div class="logo-font text-3xl font-bold tracking-tighter text-slate-900">SIMPLE<span class="text-emerald-600">COOPERATION</span></div>
+      </div>
+      <nav class="hidden md:flex items-center gap-x-8 text-sm font-medium">
+        <a href="index.html" class="text-slate-700 hover:text-slate-900">Home</a>
+        <a href="about.html" class="text-emerald-600 font-semibold">About</a>
+        <a href="#" class="text-slate-700 hover:text-slate-900">Contact Us</a>
+        <a href="register.html" class="px-6 py-2.5 bg-emerald-600 text-white rounded-2xl hover:bg-emerald-700">Get Started</a>
+      </nav>
+      <!-- Hamburger for mobile - same as home -->
+      <button class="md:hidden text-slate-700">
+        <i class="fa-solid fa-bars text-3xl"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="pt-32 pb-20 bg-gradient-to-br from-emerald-900 via-emerald-800 to-slate-900 text-white relative overflow-hidden">
+    <div class="absolute inset-0 opacity-10 bg-[url('https://images.unsplash.com/photo-1554224154-26032ffc0d07')] bg-cover bg-center"></div>
+    <div class="max-w-6xl mx-auto px-6 text-center relative z-10">
+      <span class="inline-block px-6 py-2 bg-white/10 backdrop-blur-md rounded-full text-sm font-medium mb-6">ESTABLISHED 2010</span>
+      <h1 class="text-5xl md:text-7xl font-bold logo-font leading-tight mb-6">Our Story of Resilience & Trust</h1>
+      <p class="text-xl md:text-2xl max-w-3xl mx-auto text-emerald-100 font-light">
+        From humble beginnings in Port Harcourt to becoming a trusted name in responsible lending across Nigeria and beyond.
+      </p>
+    </div>
+  </section>
+
+  <!-- Journey Timeline -->
+  <section class="py-24 section-bg">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-5xl font-bold logo-font text-slate-900">Our Journey Since 2010</h2>
+        <p class="mt-4 text-lg text-slate-600 max-w-2xl mx-auto">
+          Sixteen years of innovation, setbacks, learning, and ultimately — excellence in serving our community.
+        </p>
+      </div>
+
+      <div class="relative">
+        <!-- Vertical line -->
+        <div class="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-emerald-200 hidden md:block"></div>
+
+        <!-- 2010 Founding -->
+        <div class="flex flex-col md:flex-row items-center mb-16 timeline-item">
+          <div class="md:w-1/2 md:pr-12 md:text-right mb-8 md:mb-0">
+            <div class="inline-block bg-emerald-600 text-white px-6 py-3 rounded-2xl font-bold text-xl mb-4">2010</div>
+            <h3 class="text-3xl font-bold mb-3">Founded in Port Harcourt</h3>
+            <p class="text-slate-600 leading-relaxed">
+              Simple Cooperation began as a small cooperative lending initiative helping local traders and families access fair credit during a time when traditional banks were often out of reach for everyday Nigerians.
+            </p>
+          </div>
+          <div class="md:w-1/2 md:pl-12">
+            <div class="bg-white p-8 rounded-3xl shadow-xl border border-slate-100">
+              <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7" alt="Small business owners in Nigeria 2010s" class="rounded-2xl w-full h-64 object-cover">
+            </div>
+          </div>
+        </div>
+
+        <!-- Early Struggles 2011-2015 -->
+        <div class="flex flex-col md:flex-row-reverse items-center mb-16 timeline-item">
+          <div class="md:w-1/2 md:pl-12 md:text-left mb-8 md:mb-0">
+            <div class="inline-block bg-amber-600 text-white px-6 py-3 rounded-2xl font-bold text-xl mb-4">2011–2015</div>
+            <h3 class="text-3xl font-bold mb-3">Challenges & Backslides</h3>
+            <p class="text-slate-600 leading-relaxed">
+              Economic volatility, regulatory uncertainty in the microfinance sector, high default rates during fuel subsidy removal periods, and intense competition from informal lenders tested our model. We faced periods of slowed growth, capital constraints, and the painful reality of writing off bad loans while maintaining trust with honest borrowers.
+            </p>
+          </div>
+          <div class="md:w-1/2 md:pr-12">
+            <div class="bg-white p-8 rounded-3xl shadow-xl border border-slate-100">
+              <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f" alt="Financial struggle graph or stressed business owner" class="rounded-2xl w-full h-64 object-cover">
+            </div>
+          </div>
+        </div>
+
+        <!-- Recovery & Growth 2016-2020 -->
+        <div class="flex flex-col md:flex-row items-center mb-16 timeline-item">
+          <div class="md:w-1/2 md:pr-12 md:text-right mb-8 md:mb-0">
+            <div class="inline-block bg-emerald-600 text-white px-6 py-3 rounded-2xl font-bold text-xl mb-4">2016–2020</div>
+            <h3 class="text-3xl font-bold mb-3">Turning Point & Digital Pivot</h3>
+            <p class="text-slate-600 leading-relaxed">
+              We embraced technology, strengthened risk assessment, partnered with reliable telcos and payment gateways, and focused on transparency. By 2018 we had rebuilt trust, expanded to multiple states, and began offering faster, fairer loans — including crypto and wire options for global Nigerians.
+            </p>
+          </div>
+          <div class="md:w-1/2 md:pl-12">
+            <div class="bg-white p-8 rounded-3xl shadow-xl border border-slate-100">
+              <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d" alt="Digital transformation fintech growth Nigeria" class="rounded-2xl w-full h-64 object-cover">
+            </div>
+          </div>
+        </div>
+
+        <!-- Achievements 2021-Present -->
+        <div class="flex flex-col md:flex-row-reverse items-center mb-16 timeline-item">
+          <div class="md:w-1/2 md:pl-12 md:text-left mb-8 md:mb-0">
+            <div class="inline-block bg-emerald-600 text-white px-6 py-3 rounded-2xl font-bold text-xl mb-4">2021–2026</div>
+            <h3 class="text-3xl font-bold mb-3">Excellence & Impact</h3>
+            <p class="text-slate-600 leading-relaxed">
+              Today we proudly stand with:
+            </p>
+            <ul class="mt-6 space-y-4 text-slate-700">
+              <li class="flex items-start"><i class="fa-solid fa-check-circle text-emerald-600 mr-3 mt-1 text-xl"></i><span>Over ₦45 billion disbursed in responsible loans</span></li>
+              <li class="flex items-start"><i class="fa-solid fa-check-circle text-emerald-600 mr-3 mt-1 text-xl"></i><span>More than 85,000 families and businesses supported</span></li>
+              <li class="flex items-start"><i class="fa-solid fa-check-circle text-emerald-600 mr-3 mt-1 text-xl"></i><span>99.2% repayment rate built on trust, not coercion</span></li>
+              <li class="flex items-start"><i class="fa-solid fa-check-circle text-emerald-600 mr-3 mt-1 text-xl"></i><span>Expanded to crypto, wire transfers, and cross-border support</span></li>
+              <li class="flex items-start"><i class="fa-solid fa-check-circle text-emerald-600 mr-3 mt-1 text-xl"></i><span>Recognized for transparency and customer-first approach in Nigeria's evolving fintech landscape</span></li>
+            </ul>
+          </div>
+          <div class="md:w-1/2 md:pr-12">
+            <div class="bg-white p-8 rounded-3xl shadow-xl border border-slate-100">
+              <img src="https://images.unsplash.com/photo-1556740714-a8395b3a74dd" alt="Celebrating success happy clients Nigeria" class="rounded-2xl w-full h-64 object-cover">
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Mission & Values -->
+  <section class="py-24 bg-white">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-16 items-center">
+        <div>
+          <h2 class="text-5xl font-bold logo-font text-slate-900 mb-6">Our Enduring Mission</h2>
+          <p class="text-xl text-slate-600 leading-relaxed mb-8">
+            We exist to make responsible credit accessible, transparent, and empowering — never exploitative. Every loan is backed by human oversight, fair terms, and genuine care for our clients' long-term financial health.
+          </p>
+          <div class="flex flex-wrap gap-6">
+            <div class="bg-emerald-50 px-8 py-6 rounded-3xl">
+              <h4 class="font-bold text-xl mb-2">Transparency</h4>
+              <p class="text-slate-600">No hidden fees. Clear terms from day one.</p>
+            </div>
+            <div class="bg-emerald-50 px-8 py-6 rounded-3xl">
+              <h4 class="font-bold text-xl mb-2">Accountability</h4>
+              <p class="text-slate-600">16 years. Zero tolerance for unethical practices.</p>
+            </div>
+          </div>
+        </div>
+        <div class="relative">
+          <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f" alt="Team working together" class="rounded-3xl shadow-2xl w-full">
+          <div class="absolute -bottom-8 -right-8 bg-white p-8 rounded-3xl shadow-xl">
+            <div class="text-5xl font-bold text-emerald-600">16</div>
+            <p class="text-slate-600 font-medium">Years of Proven Trust</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-slate-900 text-white py-16">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <div class="logo-font text-4xl font-bold tracking-tighter mb-6">SIMPLE COOPERATION</div>
+      <p class="text-slate-300 max-w-xl mx-auto mb-8">
+        Building financial futures with integrity since 2010. From Port Harcourt to the world — we grow together.
+      </p>
+      <p class="text-slate-500 text-sm">
+        © 2010 – 2026 Simple Loan Cooperation Limited • Port Harcourt, Rivers State, Nigeria
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>
